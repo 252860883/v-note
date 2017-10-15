@@ -1,7 +1,8 @@
 <template>
     <section class="list_notes">
         <transition-group name="fade2">
-            <div class="list_note"  v-for="note in notes" :key="note.noteId" >
+            <!-- v-for循环 必须设置一个key值-->
+            <div class="list_note"  v-for="note in notes" :key="note.noteId"  v-if="isShow(note)">
                 <!--动态绑定 to的地址-->
                 <div class="btn_delete" @click="removeNote(note.noteId)">X</div>
                 <router-link :to="{name: 'view',params: { noteId: note.noteId}}" class="router">
@@ -16,7 +17,6 @@
 </template>
 
 <script>
-    import {mapGetters} from 'vuex';
     export default {
         data () {
             return {
@@ -25,8 +25,6 @@
         },
         mounted () {
             this.listNodes();
-            this.search;
-            console.log(this.search)
         },
         methods:{
             listNodes () {
@@ -45,12 +43,15 @@
                 this.notes=[];
                 localStorage.setItem('vNotes',JSON.stringify(note));
                 this.listNodes();
+            },
+            isShow(note){
+                var searchVal=this.$store.state.search;
+                if(note.title.slice(0,searchVal.length)==searchVal){
+                    return true;
+                }
             }
         },
         computed:{
-            ...mapGetters([
-                'search'
-            ])
         }
     }
 </script>
@@ -100,15 +101,15 @@
         max-height: 7.8em;
         overflow: hidden;
     }
+
     a{
         text-decoration: none;
         color: #fff;
-
     }
     .btn_delete{
         position: absolute;
         top: 10em;
-        right: 3em;
+        right: 1.8em;
         width: 3em;
         height: 3em;
         border-radius: 50%;

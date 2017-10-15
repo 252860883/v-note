@@ -22,16 +22,7 @@
         methods:{
             ...mapActions([
                 'setNote',
-            ]),
-            //注意！！ 这个get没有用到
-            getNote(id) {
-                const note = JSON.parse(localStorage.getItem('vNotes'));
-                note.notes.filter(n => {
-                    if(n.date == id) {
-                        this.note.title = n.title;
-                        this.note.text = n.text;
-                    }
-                });
+            ])
             }
         }
     }

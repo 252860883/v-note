@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import headerMain from './components/top.vue'
+import headerMain from './components/top.vue'
 
 export default {
   name: 'app',
@@ -17,7 +17,7 @@ export default {
 
     }
   },
-    components:{
+   components:{
       headerMain
     }
 }

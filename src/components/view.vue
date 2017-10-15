@@ -1,3 +1,4 @@
+
 <template>
     <section class="view">
             <div class="view_show">
@@ -13,7 +14,7 @@
         data () {
             return {
                 title:'',
-                text:' ',
+                text:'',
             }
         },
         methods: {
