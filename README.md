@@ -1,6 +1,6 @@
-# v-note
+# v-note笔记本
 
-> A Vue.js project
+![image](/src/assets/img/vnote_add.gif)
 
 ## Build Setup
 
