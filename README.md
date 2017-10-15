@@ -1,6 +1,6 @@
 # v-note笔记本
 
-![image](/src/assets/img/logo.png)
+
 
 ## Build Setup
 
