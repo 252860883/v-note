@@ -6,11 +6,13 @@
 ## 2.View
 #### 创建笔记和查看
 ![](https://github.com/252860883/v-note/blob/master/src/assets/img/vnote_add.gif?raw=true)
+---
 #### 查找笔记
 ![](https://github.com/252860883/v-note/blob/master/src/assets/img/vnote_search.gif?raw=true)
+---
 #### 删除笔记
 ![](https://github.com/252860883/v-note/blob/master/src/assets/img/vnote_del.gif?raw=true)
-
+---
 ## 3.Progress
 笔记的编辑，响应式交互等...
 
